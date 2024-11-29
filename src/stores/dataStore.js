@@ -13,7 +13,11 @@ const useDataStore = create(
 
 // 使用 subscribe 监听状态变化
 useDataStore.subscribe(state => state.value, (state, prev) => {
-    console.log('Count changed from', prev, 'to', state);
+    console.log('Value changed from', prev, 'to', state);
+});
+
+useDataStore.subscribe(state => state.checked, (state, prev) => {
+    console.log('Checked changed from', prev, 'to', state);
 });
 
 export default useDataStore;
