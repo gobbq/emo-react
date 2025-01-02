@@ -9,6 +9,7 @@ function Timer() {
 
         if (isActive) {
             intervalId = setInterval(() => {
+                console.log('time is up...')
                 setSeconds(prevSeconds => prevSeconds + 1);
             }, 1000);
         }
@@ -19,8 +20,9 @@ function Timer() {
     const handleStart = () => setIsActive(true);
     const handleStop = () => setIsActive(false);
     const handleReset = () => {
-        setIsActive(false);
-        setSeconds(0);
+        console.error('reset');
+        // setIsActive(false);
+        // setSeconds(0);
     };
 
     return (
